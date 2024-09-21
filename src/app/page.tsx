@@ -1,112 +1,226 @@
+"use client";
+import BannerImage1 from "@/components/bannerImage/bannerImage1";
+import BannerImage2 from "@/components/bannerImage/bannerImage2";
+import BeastMobiles from "@/components/circleBoxImages/beastMobiles";
+import CircleSlider from "@/components/slider/circleSlider";
+import MainSlider from "@/components/slider/mainSlider";
+import OfferSlider from "@/components/slider/offerSlider";
+import SmartFlagshipsSlider from "@/components/slider/smartFlagshipsSlider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import LaptopInTechnolife from "@/components/slider/laptopIntechnolife";
+import Link from "next/link";
+import BestOfLaptops from "@/components/circleBoxImages/bestoflaptop";
+import BannerImage3 from "@/components/bannerImage/bannerImage3";
+import PhoneAbilityAndPrice from "@/components/phoneAbilityAndPrice";
+import BeastAirpads from "@/components/circleBoxImages/bestAirpads";
+import BannerImage4 from "@/components/bannerImage/bannerImage4";
+import BrandSlider from "@/components/slider/brandSlider";
+import BestTablets from "@/components/slider/besttablets";
+import ImageAndTextUp from "@/components/bannerImage/imageAndTextUp";
+import BannerImage5 from "@/components/bannerImage/bannerImage5";
+import ChosenStuff from "@/components/slider/chosenStuff";
+import HouseHoldApliances from "@/components/slider/householdApliances";
+import AboutTechnolifeBlog from "@/components/slider/aboutTechnolifeBlog";
+import ExpandableText from "@/components/expandelText";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="overflow-hidden ">
+      <div className="">
+        <MainSlider />
+      </div>
+
+      <div className=" mt-12  ml-12 max-md:ml-2">
+        <CircleSlider />
+      </div>
+      <div className="mt-6 flex flex-col max-md:m-0 max-md:mt-6 max-md:p-0 p-4 m-6 border-4 border-red-500 max-lg:border-0 max-lg:border-b-4 max-lg:rounded-none  rounded-lg">
+        <div className="w-full mb-8 ">
+          <Image
+            className="w-full"
+            src="/offerSlider/static-brand.svg"
+            width={1000}
+            height={100}
+            alt="static-brand-offer"
+          />
+        </div>
+        <div className="m-6 max-md:m-0">
+          <OfferSlider />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="m-6">
+        <BannerImage1 />
       </div>
+      <div className="mt-6 m-6 border border-gray-200 rounded-2xl p-2  max-md:p-0 max-md:m-0 max-md:mt-6">
+        <div className="flex items-center justify-between mx-4">
+          <div className="text-xl mb-4 pt-4 mr-4 ">پرچمداران هوشمند</div>
+          <div className="text-blue-600 flex gap-2 items-center">
+            <Link href="/">نمایش همه</Link>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+        </div>
+        <SmartFlagshipsSlider />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1 ">
+        <BeastMobiles />
+      </div>
+      <div className="mt-12 mx-6  max-md:mx-1 ">
+        <BannerImage2 />
+      </div>
+      <div className="mt-6 m-6 border border-gray-200 rounded-2xl p-2  max-md:p-0 max-md:m-0 max-md:mt-6  ">
+        <div className="flex items-center justify-between mx-4">
+          <div className="text-xl mb-4 pt-4 mr-4 ">لپ تاپ ها در تکنولایف</div>
+          <div className="text-blue-600 flex gap-2 items-center">
+            <Link href="/ ">نمایش همه</Link>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+        </div>
+        <LaptopInTechnolife />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1 ">
+        <BestOfLaptops />
+      </div>
+      <div className="mt-14 mx-6 max-md:mx-1 ">
+        <BannerImage3 />
+      </div>
+      <div className="mt-14 mx-6 max-md:mx-1 ">
+        <PhoneAbilityAndPrice />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1 ">
+        <BeastAirpads />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1 ">
+        <BannerImage4 />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-0 ">
+        <BrandSlider />
+      </div>
+      <div className="mt-6 m-6 border border-gray-200 rounded-2xl p-2  max-md:p-0 max-md:m-0 max-md:mt-6  ">
+        <div className="flex items-center justify-between mx-4">
+          <div className="text-xl mb-4 pt-4 mr-4 ">تبلت ها در تکنولایف</div>
+          <div className="text-blue-600 flex gap-2 items-center">
+            <Link href="/ ">نمایش همه</Link>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+        </div>
+        <BestTablets />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-0">
+        <h2 className="flex gap-2 items-center">
+          <div className="text-lg">لوازم خانگی</div>
+          <span className="text-gray-500 mr">خانه و آشپز خانه</span>
+        </h2>
+        <ImageAndTextUp />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1 ">
+        <BannerImage5 />
+      </div>
+      <div className="mt-6 m-6  border-green-400 md:border-2  max-md:border-y max-md:rounded-none  rounded-2xl p-2  max-md:p-0 max-md:m-0 max-md:mt-6  ">
+        <div className="flex items-center justify-between mx-4">
+          <div className="text-xl mb-4 pt-4 mr-4 ">لوازم جانبی منتخب</div>
+        </div>
+        <ChosenStuff />
+      </div>
+      <div className="mt-14 m-6  border-gray-300 md:border-2   max-md:border-y max-md:rounded-none rounded-2xl p-2  max-md:p-0 max-md:m-0 max-md:mt-6  ">
+        <div className="flex items-center justify-between mx-4">
+          <div className="text-xl mb-4 pt-4 mr-4 ">لوازم خانگی تکنولایف</div>
+          <div className="text-blue-600 flex gap-2 items-center">
+            <Link href="/ ">نمایش همه</Link>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+        </div>
+        <HouseHoldApliances />
+      </div>
+      <div className="mt-14 m-6  border-blue-600 md:border-2  max-md:border-y max-md:rounded-none  rounded-2xl p-6  max-md:p-0 max-md:m-0 max-md:mt-6  ">
+        <div className="flex items-center justify-between mx-4 my-2">
+          <div className="text-xl mb-4 pt-4 mr-4 ">از وبلاگ تکنولایف</div>
+          <div className="text-blue-600 flex gap-2 items-center">
+            <Link href="/ ">نمایش بیشتر در بلاگ</Link>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+        </div>
+        <AboutTechnolifeBlog />
+      </div>
+      <div className="mt-10 mx-6 max-md:mx-1">
+        <ExpandableText
+          text="فروشگاه اینترنتی تکنولایف
+فروشگاه اینترنتی تکنولایف سال‌ها است که به‌عنوان بزرگترین فروشگاه کالای دیجیتال مشغول فعالیت است. از آن‌جا که خرید اینترنتی همواره موجی از بی‌اعتمادی و شک را با خود به‌همراه داشته، نماد الکترونیکی می‌تواند خیال خیلی از افراد را راحت کند. تکنولایف با داشتن نماد اعتماد الکترونیکی و عضویت در سازمان صنفی رایانه‌ای کشور، همچنین عضویت در انجمن صنفی فروشگاه‌های اینترنتی، فضای ایمن برای خرید آنلاین را برای مشتریان خود ایجاد کرده است.
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+شما می‌توانید خرید کالای دیجیتال مانند خرید لپ تاپ ، گوشی موبایل در مدل‌ها و برندهای مختلف، لوازم جانبی موبایل ، هدفون، و کلیه لوازم دیجیتال مدنظر خود را با بهترین قیمت، در فروشگاه تکنولایف به ثبت برسانید.
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+خرید گوشی از تکنولایف
+برای خیلی از کاربران، تکنولایف فروشگاه اینترنتی موبایل محسوب می‌شود. این بدان خاطر است که شما می‌توانید انواع گوشی موبایل مورد نظر خود، از جمله گوشی شیائومی ، گوشی سامسونگ، گوشی هواوی، آیفون و دیگر برندها را در تکنولایف به‌راحتی پیدا و با قیمتی مناسب، خریداری کنید. خرید گوشی موبایل، آن‌هم اینترنتی، می‌تواند کاری دشوار باشد؛ اما شما می‌توانید با اطمینان کامل، گوشی موبایل مد نظرتان را از فروشگاه اینترنتی موبایل تکنولایف استعلام قیمت کرده و خریداری کنید.
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+خرید گوشی سامسونگ
+برند کره‌ای سامسونگ، با تولید سالانه‌ی گوشی‌های پرچمدار، میان‌رده و اقتصادی، یکی از پرطرفدارترین و محبوب‌ترین برندها در میان کاربران سراسر جهان از جمله ایران است. انواع گوشی موبایل سامسونگ، مناسب کاربران گیمر، عاشقان تولید محتوا، علاقه‌مندان به عکاسی و دیگر گروه‌ها است. تنوع بالای گوشی سامسونگ در تکنولایف، این امکان را برای شما علاقه‌مندان ایجاد کرده که اقدام به خرید گوشی سامسونگ با بهترین قیمت کنید.
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+خرید گوشی اپل
+گوشی اپل از گرانترین گوشی‌ها، در عین حال محبوب‌ترین گوشی‌ها در تمامی دنیا محسوب می‌شود. بالا بودن قیمت گوشی آیفون انگار هیچوقت نتوانست مانع شود که افراد موبایل این برند را برای خرید انتخاب نکنند. دوربین قوی، پردازنده‌ی همه‌فن‌حریف، طراحی زیبا و خیلی موارد دیگر، گوشی های این برند آمریکایی را بسیار پرطرفدار کرده و شما می‌توانید با بهترین قیمت، این گوشی‌ها را از سایت فروش گوشی تکنولایف خریداری کنید.
+
+خرید گوشی هواوی
+هواوی، این برند چینی، در سال ۲۰۱۲ برای جهانیان شناخته شد و توانست در زمانی کوتاه جزء چند شرکت برتر، به خصوص در فروش گوشی شود. با این که داستان‌های زیادی این برند داشت، اما باز هم طرفداران پروپاقرصی دارد. کسانی‌که هنوز هم به فکر خرید گوشی هواوی هستند. سایت خرید موبایل تکو لایف، گوشی‌های این برند را با قیمتی فوق‌العاده برای کاربران به فروش می‌رساند.
+
+خرید گوشی شیائومی
+سازندگان چینی شیائومی نیز، با تولید انواع گوشی و تبلت باکیفیت، توانست نظر و اعتماد خریداران گوشی را به‌ خود جلب کند. شیائومی در طیف‌های مختلف برای افراد مختلف با نیازهای گوناگون، گوشی‌های خوبی را در بازه قیمتی مختلف تولید کرد. یکی از دلایلی که شیائومی جزء برندهای پرطرفدار است، مقرون‌به‌صرفه بودن قیمت گوشی های این برند نسبت به رقبا است.
+
+شما می‌توانید انواع گوشی 5g و 4g را با بهترین قیمت از technolife خریداری کنید. توجه داشته باشید که با خرید لوازم جانبی موبایل مانند پاوربانک ، قاب و گلس، شارژر موبایل و … از تکنولایف، می‌توانید گوشی خود را به بهترین شکل تجهیز کنید.
+
+خرید هدفون و هندزفری
+در دنیای شلوغ امروزی، یکی از مهمترین گجت‌های دیجیتالی که همه در سبد خرید خود جای می‌دهند، هدفون و هندزفری است.
+
+این روزها که استفاده از هدفون و هندزفری بلوتوثی فراگیرتر از گذشته شده، خوب است بدانید که شما می‌توانید تنوع گسترده‌ای از نظر برند را در این محصولات در سایت تکنولایف پیدا کنید. کلیه هندزفری‌ها و هدفون‌ها در رنگ‌بندی‌های متنوع و با گارانتی معتبر به فروش می‌رسند. شما می‌توانید ایرپاد اپل ، ایرپاد انکر، ایرپاد سامسونگ ، ایرپاد کیو سی وای، ایرپاد شیائومی و … را با بهترین قیمت انتخاب و خریداری کنید. توجه داشته باشید که هندزفری‌ های سیمی و گردنی نیز همچنان طرفداران خود را دارند و شما می‌توانید آن‌ها را نیز از میان مدل‌های موجود انتخاب نمایید.
+
+خرید ساعت و بند هوشمند
+ساعت هوشمند و بند هوشمند، دیگر محصولاتی هستند که به دلیل داشتن امکانات بالا، این روزها بسیار مورد توجه قرار می‌گیرند و محصولی مناسب استفاده روزمره، و همینطور کاملا مناسب هدیه دادن است. ساعت‌های هوشمند با توجه به برند قیمت‌های متنوعی دارند و همانطور که انتظار می‌رود، مدل‌های گرا‌ن‌تر از امکانات بیشتری نیز بهره می‌برند. اسمارت واچ‌ها به‌خاطر داشتن تنوع برنامه‌های ورزشی، سنسورهای سلامتی، همینطور امکان مکالمه و کنترل گوشی هوشمند، بسیار پرطرفدارند. شما می‌توانید اپل واچ ، ساعت هوشمند شیائومی، ساعت هوشمند کیسلکت، ساعت هوشمند سامسونگ و خیلی برندهای دیگر را با قیمتی فوق‌العاده از فروشگاه تکنولایف خریداری کنید. همچنین می‌توانید برای تجهیز کردن اسمارت واچ خود، سراغ لوازم جانبی ساعت هوشمند نیز بروید.
+
+خرید کامپیوتر و لپ تاپ
+ساعت هوشمند و بند هوشمند، دیگر محصولاتی هستند که به دلیل داشتن امکانات بالا، این روزها بسیار مورد توجه قرار می‌گیرند و محصولی مناسب استفاده روزمره، و همینطور کاملا مناسب هدیه دادن است. ساعت‌های هوشمند با توجه به برند قیمت‌های متنوعی دارند و همانطور که انتظار می‌رود، مدل‌های گرا‌ن‌تر از امکانات بیشتری نیز بهره می‌برند. اسمارت واچ‌ها به‌خاطر داشتن تنوع برنامه‌های ورزشی، سنسورهای سلامتی، همینطور امکان مکالمه و کنترل گوشی هوشمند، بسیار پرطرفدارند.وجود حداقل یک لپ تاپ در هر خانه ضرورت دارد. علاوه بر آن، در اداره‌‌ها، مدارس، و … نیز وجود لپ تاپ و کامپیوتر بسیار حائز اهمیت است. انواع لپ تاپ مانند مک بوک ، لپ تاپ ایسوس و همینطور انواع کامپیوتر مانند آل این وان را می‌توانید از تکنولایف تهیه نمایید. شما همچنین می‌توانید لپ تاپ و کامپیوتر مورد نظر خود را از میان انواع لپ تاپ گیمینگ ، دانشجویی، لمسی و دیگر کاربری‌ها انتخاب نمایید. علاوه بر لپ تاپ و کامپیوتر خرید انواع قطعات و لوازم جانبی مثل پردازنده ، کارت گرافیک ، مادربرد ، رم کامپیوتر، هارد اکسترنال ، هارد ssd ، هارد اینترنال ، شارژر و باتری لپ تاپ در این بخش از سایت تکنولایف امکان پذیر است.
+
+خرید تجهیزات شبکه و ماشین‌های اداری
+تجهیزاتی مانند کارت شبکه و مودم، دوربین مدار بسته، همینطور ماشین‌های اداری مانند پرینتر ، نه تنها در اداره‌ها، که در خیلی از خانه‌ها نیز استفاده می‌شوند. شما می‌توانید تجهیزات شبکه و ماشین‌های اداری را در مدل‌های مختلف، در تکنولایف مشاهده نموده و اقدام به خرید کنید.
+
+خرید سیستم صوتی تصویری
+از دیگر گزینه‌های خرید لوازم دیجیتال مهم، می‌توانیم به انواع سیستم صوتی تصویری مثل اسپیکر ، ساندبار ، اندروید باکس و تلویزیون اشاره کنیم. تلویزیون از آن دست کالاهایی است که همیشه در تمامی خانه‌ها بوده و امروزه خیلی از افراد بیشتر از یک تلویزیون برای خانه خود خریداری می‌کنند. علاوه بر آن، در اماکن دیگری مانند سالن‌های انتظار، هتل‌ها و اتاق‌های بیمارستانی نیز تلویزیون دیده می‌شود. شما می‌توانید قیمت تلویزیون در ابعاد مختلف و کیفیت‌ تصویر‌های گوناگون، همچنین تنوعی از برندها را در تکنولایف مشاهده کنید و اقدام به ثبت خرید خود از این فروشگاه اینترنتی دیجیتال نمایید.
+
+خرید لوازم و تجهیزات گیمینگ
+تکنولایف گیمرها را فراموش نکرده! شما همانطور که می‌توانید گوشی و لپ تاپ گیمینگ خود را از تکنولایف خریداری کنید، این امکان را دارید که انواع کنسول بازی مورد نظرتان را نیز از تکنولایف بخرید. در کنار آن، تنوع بسیار خوبی از لوازم جانبی مانند دسته بازی ، موس گیمینگ، مانیتور گیمینگ، کیف کنسول و خیلی موارد از این قبیل را می‌توانید در تکنولایف مشاهده کرده و خرید اینترنتی خود را به ثبت برسانید.
+
+خرید لوازم خانگی
+امروزه که حجم بالایی از لوازم خانگی با برق کار می‌کنند، خوب است که برای لوازم دیجیتال خانه از یک فروشگاه معتبر آنلاین کمک بگیرید. فروشگاه دیجیتال تکنولایف به‌عنوان یکی از معتبرترین فروشگاه هایی که در فروش انواع لوازم خانگی دیجیتال کوچک و بزرگ فعالیت می‌کند، این امکان را فراهم می‌کند تا از یخچال فریزر گرفته تا ماشین ظرفشویی ، ماشین لباسشویی و لوازم کوچک آشپزخانه مانند چای ساز،‌ اتو، همزن برقی، انواع جاروبرقی و جارو شارژی و هر محصول دیگری که برای خانه خود احتیاج دارید را به‌راحتی و با بهترین قیمت، به همراه گارانتی معتبر، تهیه کنید.
+
+زیبایی و سلامت
+وجود ابزار سلامت در خانه‌ها ضرورت دارد. لوازمی مانند تب سنج، فشارسنج، ماساژور و دیگر اقلام از این قبیل، در خانه‌هایی که افراد مسن و کودکان هستند، مدام استفاده می‌شود و خوب است به فکر خرید آن‌ها باشید. انواع مختلفی از این لوازم را می‌توانید با قیمتی مناسب از تکنولایف سفارش دهید.
+
+خرید ابزارآلات و تجهیزات
+برای خانه، کارگاه و ساختمان‌سازی، خرید ابزارآلات و تجهیزات ضرورت دارد. انواع ابزارآلات مانند ابزار شارژی ، ابزار برقی ، ابزار بادی و … از بهترین برندها در فروشگاه اینترنتی تکنولایف موجود است تا شما عزیزان بتوانید جعبه ابزار خود را به‌راحتی تجهیز کنید.
+
+خرید طلا و جواهرات
+خرید طلا و جواهرات، جزء پرسودترین خریدهاست و خیلی از افراد به منظور سرمایه‌گذاری سراغ خرید سکه یا جواهرات می‌روند. خوب است بدانید که تکنولایف علاوه بر این‌که فروشگاه اینترنتی کالای دیجیتال است، امکان خرید سکه و طلا را نیز برای شما فراهم آورده است.
+
+خرید اقساطی تکنولایف
+تکنولایف برای مشتریان عزیز خود، امکان خرید اقساطی را فراهم کرده است. چنانچه قصد خرید اقساطی از فروشگاه اینترنتی کالای دیجیتال تکنولایف را دارید، می‌توانید بدون نیاز به ضامن یا پیش‌پرداخت، در قسط‌های ۱۸ و ۲۴ ماهه خرید خود را انجام دهید. برای این‌کار، کافی است مراحلی که در صفحه خرید اقساطی درج شده را مطالعه کنید.
+
+گارانتی و خدمات پس از فروش تکنولایف
+تکنولایف شمار زیادی از کالاها را با گارانتی‌های معتبر ارائه می‌کند. شما می‌توانید پس از تحویل کالا از مهلت تست ۷ روزه کالا استفاده کنید و در مدت زمان مشخص‌شده درصورتی که کالا با ایرادات فنی خاصی همراه بود، از خدمات پس از فروش و خدمات مرجوعی تکنولایف استفاده کنید. همچنین، تکنولایف از خریداران در مراحلی که محصول نیاز به استفاده از خدمات، گارانتی و پشتیبانی دارد حمایت می‌کند.
+
+تخفیف‌‌های ویژه تکنولایف
+خرید از تکنولایف، قرار است همیشه برای شما رضایت‌بخش باشد. به‌همین‌منظور تکنولایف در طی سال با برگزاری جشنواره‌های مختلف، تخفیف‌های ویژه‌ای را برای مشتریان در نظر گرفته است.
+
+پشتیبانی تکنولایف
+شما می‌توانید جهت خرید کالا، پرسش‌های خود را در بسترهای مختلفی که تکنولایف فراهم کرده مطرح کنید. جهت دریافت مشاوره خرید و پیگیری سفارشات می‌توانید با مرکز تماس تکنولایف و با شماره‌های 02147708000 و 02191077500 ارتباط برقرار نمایید و از پشتیبانی انلاین تکنولایف بهره ببرید.
+
+همچنین می‌توانید پرسش‌های متداول خود را از طریق چت آنلاین در وبسایت تکنولایف مطرح نمایید.
+
+نمایندگی و شعب حضوری
+تکنولایف بستری را فراهم کرده است تا خریداران بتوانند در شهر تهران به‌صورت حضوری خریدشان را انجام بدهند. شما می‌توانید جهت خرید کالا به شعب حضوری تکنولایف شامل ( شعبه 1: بازار موبایل ایران 1 - شعبه 2: مرکز خرید عرش آجودانیه - شعبه 3: مرکز خرید اپال، سعادت آباد - شعبه 4: بازار موبایل ایران 2 ، یافت آباد (مراجعه نمایید.
+
+روش‌های ارسال کالا
+شرکت تکنولایف برای مشتریان خود روش‌های ارسال متنوعی در نظر گرفته است. علاوه‌بر شیوه‌ی ارسال عادی که از طریق پست، تیپاکس و باربری‌ انجام می‌شود، سرویس ارسال سریع تکنولایف امکان ارسال یک‌روزه را در حال حاضر برای ۷ شهر ایران (تهران، کرج، تبریز، شیراز، مشهد، اهواز و اصفهان) فعال کرده است.
+
+همکاری با تکنولایف (فروشنده شو)
+سایت فروش موبایل و کالای دیجیتال تکنولایف، امکان همکاری با علاقه‌مندان و دیگر فروشندگان را فراهم کرده است. بدین‌منظور، اگر فروشنده کالای دیجیتال هستید و می‌خواهید با تکنولایف جهت فروش همکاری داشته باشید، کافی است که اطلاعات درج شده در صفحه فروشنده شو را مطالعه کرده و مراحل لازمه را طی نمایید. از مزایای همکاری با تکنولایف به عنوان سلر یا فروشنده، می‌توانیم به مواردی چون بازپرداخت سریع و کمیسیون منصفانه، انبارداری رایگان و همینطور ثبت نام رایگان و راحت اشاره داشته باشیم."
+        />
       </div>
     </main>
   );

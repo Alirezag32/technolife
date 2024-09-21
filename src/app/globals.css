@@ -1,33 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "yecan",sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+    font-family: "yecan";
+    src: url("/fonts/vazir-font-v16.1.0/Vazir.woff") format('wwf');
+    font-weight: normal;
+  font-style: normal;
+ 
   }
-}
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  direction: rtl;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
+
+
+.z-30-important {
+  z-index: 9999!important;
+}
+
+.swiper-scrollbar {
+  display: none;
+}
+
+
