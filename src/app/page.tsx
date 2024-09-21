@@ -57,7 +57,7 @@ export default function Home() {
           <div className="text-xl mb-4 pt-4 mr-4 ">پرچمداران هوشمند</div>
           <div className="text-blue-600 flex gap-2 items-center">
             <Link href="/">نمایش همه</Link>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon className="mt-1" icon={faArrowLeft} />
           </div>
         </div>
         <SmartFlagshipsSlider />
@@ -73,7 +73,7 @@ export default function Home() {
           <div className="text-xl mb-4 pt-4 mr-4 ">لپ تاپ ها در تکنولایف</div>
           <div className="text-blue-600 flex gap-2 items-center">
             <Link href="/ ">نمایش همه</Link>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon className="mt-1" icon={faArrowLeft} />
           </div>
         </div>
         <LaptopInTechnolife />
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="text-xl mb-4 pt-4 mr-4 ">تبلت ها در تکنولایف</div>
           <div className="text-blue-600 flex gap-2 items-center">
             <Link href="/ ">نمایش همه</Link>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon className="mt-1" icon={faArrowLeft} />
           </div>
         </div>
         <BestTablets />
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="text-xl mb-4 pt-4 mr-4 ">لوازم خانگی تکنولایف</div>
           <div className="text-blue-600 flex gap-2 items-center">
             <Link href="/ ">نمایش همه</Link>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon className="mt-1" icon={faArrowLeft} />
           </div>
         </div>
         <HouseHoldApliances />
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="text-xl mb-4 pt-4 mr-4 ">از وبلاگ تکنولایف</div>
           <div className="text-blue-600 flex gap-2 items-center">
             <Link href="/ ">نمایش بیشتر در بلاگ</Link>
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon className="mt-1" icon={faArrowLeft} />
           </div>
         </div>
         <AboutTechnolifeBlog />

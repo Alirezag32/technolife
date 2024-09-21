@@ -109,7 +109,7 @@ export default function ChosenStuff() {
 
         return (
           <SwiperSlide
-            className="cursor-pointer p-7 max-sm:p-2 flex flex-col justify-between border-l border-r border-gray-100 "
+            className="cursor-pointer p-4 max-sm:p-1 flex flex-col justify-between border-l border-r border-gray-100 "
             key={index}
           >
             <div className="flex flex-col justify-between items-center">
@@ -127,27 +127,27 @@ export default function ChosenStuff() {
               </div>
               <div className="w-full mt-4">
                 {item.discount ? (
-                  <div className="p-2 ">
-                    <div className="flex  justify-between items-center">
-                      <p className="text-sm p-1 bg-red-600 rounded text-white">
+                  <div className="p-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-xs sm:text-sm p-0.5 bg-red-500 rounded text-white">
                         {convertToPersianNumber(item.discount)}%
                       </p>
-                      <p className="text-sm font-semibold text-red-500">
+                      <p className="text-xs sm:text-sm font-semibold text-red-500 ">
                         {convertToPersianNumber(
                           formatPriceWithCommas(discountedPrice)
                         )}{" "}
                         تومان
                       </p>
                     </div>
-                    <p className="text-xs text-end font-semibold line-through text-gray-500 mt-1">
+                    <p className="text-xs sm:text-sm text-end font-semibold line-through text-gray-500 mt-1 flex justify-end">
                       {convertToPersianNumber(
                         formatPriceWithCommas(item.price)
                       )}{" "}
-                      تومان
+                      <div className="max-xs:hidden">تومان</div>
                     </p>
                   </div>
                 ) : (
-                  <p className="text-sm p-2 font-semibold text-end text-black">
+                  <p className="text-xs sm:text-sm p-2 font-semibold text-end text-black">
                     {convertToPersianNumber(formatPriceWithCommas(item.price))}{" "}
                     تومان
                   </p>

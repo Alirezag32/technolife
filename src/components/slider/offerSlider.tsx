@@ -118,7 +118,7 @@ export default function OfferSlider() {
 
         return (
           <SwiperSlide
-            className="cursor-pointer ml-[20px] pb-2 flex flex-col justify-between border-l border-r border-gray-50 "
+            className="cursor-pointer pl-[10px] pb-2 flex flex-col justify-between border-l border-r border-gray-50 "
             key={index}
           >
             <div className="flex flex-col justify-between">
@@ -126,29 +126,40 @@ export default function OfferSlider() {
                 <Image
                   src={item.src}
                   alt={`Slide ${index + 1}`}
-                  className="w-24 h-32 sm:w-20 sm:h-28 md:w-32  md:h-40"
+                  className="w-40 h-50"
                   priority
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                 />
                 <h5 className="text-sm text-center mt-4">{item.titel}</h5>
               </div>
-              <div className="w-full md:w-10/12 mt-4">
-                <div className="flex justify-between items-center">
-                  <p className="text-sm p-1 bg-red-600 rounded text-white">
-                    {convertToPersianNumber(item.discount)}%
-                  </p>
-                  <p className="text-sm font-semibold text-red-500">
-                    {convertToPersianNumber(
-                      formatPriceWithCommas(discountedPrice)
-                    )}{" "}
+              <div className="w-full mt-4">
+                {item.discount ? (
+                  <div className="p-2">
+                    <div className="flex justify-between items-center">
+                      <p className="text-xs sm:text-sm p-0.5 bg-red-500 rounded text-white">
+                        {convertToPersianNumber(item.discount)}%
+                      </p>
+                      <p className="text-xs sm:text-sm font-semibold text-red-500 ">
+                        {convertToPersianNumber(
+                          formatPriceWithCommas(discountedPrice)
+                        )}{" "}
+                        تومان
+                      </p>
+                    </div>
+                    <p className="text-xs sm:text-sm text-end font-semibold line-through text-gray-500 mt-1 flex justify-end">
+                      {convertToPersianNumber(
+                        formatPriceWithCommas(item.price)
+                      )}{" "}
+                      <div className="max-xs:hidden">تومان</div>
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-xs sm:text-sm p-2 font-semibold text-end text-black">
+                    {convertToPersianNumber(formatPriceWithCommas(item.price))}{" "}
                     تومان
                   </p>
-                </div>
-                <p className="text-xs text-end font-semibold line-through text-gray-500 mt-1">
-                  {convertToPersianNumber(formatPriceWithCommas(item.price))}{" "}
-                  تومان
-                </p>
+                )}
               </div>
             </div>
           </SwiperSlide>
